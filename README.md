@@ -1,7 +1,7 @@
 # aks-helloworld
 
 This sample is a very simple NodeJS application used to demonstrate Application deployment in [Azure Kubernetes Service](https://docs.microsoft.com/en-us/azure/aks). 
-The packaged version of the application is available on [Docker Hub](https://hub.docker.com/r/pinpindock/helloaks).
+The packaged version of the application is available on [Docker Hub](https://hub.docker.com/r/pinpindock/hello-aks).
 
 # Build the docker image
 ```sh
@@ -15,15 +15,15 @@ systeminfo
 docker system df
 docker container ls
 
-docker build --no-cache -t "$docker_usr/helloaks:1.0" -f ".\Dockerfile" .
+docker build --no-cache -t "$docker_usr/hello-aks:1.0" -f ".\Dockerfile" .
 docker image list
-docker image history "$docker_usr/helloaks:1.0"
+docker image history "$docker_usr/hello-aks:1.0"
 ```
 
 ## Push it to Docker Hub
 ```sh
-docker image push "$docker_usr/helloaks:1.0"
-docker scan --accept-license --file Dockerfile "$docker_usr/helloaks:1.0"
+docker image push "$docker_usr/hello-aks:1.0"
+docker scan --accept-license --file Dockerfile "$docker_usr/hello-aks:1.0"
 # docker image prune -a
 # docker system prune -a
 # docker container prune
