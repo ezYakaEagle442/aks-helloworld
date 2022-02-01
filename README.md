@@ -15,7 +15,7 @@ systeminfo
 docker system df
 docker container ls
 
-docker build --no-cache -t "$docker_usr/hello-aks:1.0" -f ".\Dockerfile" .
+docker build --no-cache -t "$docker_usr/hello-aks:1.0" -f "Dockerfile" .
 docker image list
 docker image history "$docker_usr/hello-aks:1.0"
 ```
