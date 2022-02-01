@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: "aksdemo347pzhzb7day6-e7a4"
+    labels:
+        app: "aksdemo347pzhzb7day6-e7a4"
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+      name: http
+    selector:
+        app: "aksdemo347pzhzb7day6-e7a4"
